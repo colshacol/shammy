@@ -1,5 +1,4 @@
 .git/
-demo/
-index.html
+dist/
 test.js
 node_modules/

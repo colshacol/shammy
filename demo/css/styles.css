@@ -1,0 +1,11 @@
+/* STYLES.CSS */
+html {
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+body:hover {
+  color: black;
+  background: white;
+}
+/* END STYLES.CSS */

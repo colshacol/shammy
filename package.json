@@ -1,0 +1,23 @@
+{
+  "name": "shammy",
+  "version": "0.0.1",
+  "description": "Shammy takes a HTML file and absorbs its local dependencies so that only one http request is necessary to present the page to the client.",
+  "main": "shammy.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/colshacol/shammy.git"
+  },
+  "keywords": [
+    "http",
+    "https"
+  ],
+  "author": "Shane Colcleasure",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/colshacol/shammy/issues"
+  },
+  "homepage": "https://github.com/colshacol/shammy#readme"
+}

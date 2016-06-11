@@ -34,3 +34,12 @@ easily written, easily understood, and made even easier with [these snippets](ht
 ```
 
 With the code above, given that the files are present where we specified in our absorb attributes, the variable allInclusiveHTML will now contain the contents of all of the files and be ready to be sent off to the client as a single http request, rather than five.
+
+
+## CHANGE LOG
+
+### 6/10/2016
+- v0.0.4 | Fixed error caused by space preceeding '/>'.
+- v0.0.3 | Added support for script `async` and `defer` attributes.
+- v0.0.2 | Fixed undiagnosed `unidentified` error.
+- v0.0.1 | Initial release.

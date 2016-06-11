@@ -5,7 +5,7 @@ module.exports = {
     let htmlNew = FILES.readFileSync(htmlPath, 'utf8');
     let htmlReturn = htmlNew.replace(/(<absorb\s(.+)\/>)/g, function(absorbEl) {
       let filePath = '', fileType = '', jsMod = '';
-      if (absorbEl.indexOf(' />')) { absorbEl = absorbEl.replace('\' />', '\'/>') };
+      if (absorbEl.indexOf(' />')) { absorbEl = absorbEl.replace(/('|")\s\/>/g, '\'/>') };
       if (absorbEl.indexOf('css=') >= 0) {
         fileType = 'css';
         filePath = absorbEl.slice(

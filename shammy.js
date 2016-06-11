@@ -3,9 +3,11 @@ const FILES = require('fs');
 module.exports = {
   absorb: (htmlPath) => {
     let htmlNew = FILES.readFileSync(htmlPath, 'utf8');
-    let htmlReturn = htmlNew.replace(/(<absorb\s(.+)\/>)/g, function(absorbEl) {
+    let htmlReturn = htmlNew.replace(/(<absorb\s(.+?)\/>)/g, function(absorbEl) {
       let filePath = '', fileType = '', jsMod = '';
-      if (absorbEl.indexOf(' />')) { absorbEl = absorbEl.replace(/('|")\s\/>/g, '\'/>') };
+
+      if (absorbEl.indexOf(' />')) absorbEl = absorbEl.replace(/('|")\s\/>/g, '\'/>');
+
       if (absorbEl.indexOf('css=') >= 0) {
         fileType = 'css';
         filePath = absorbEl.slice(
@@ -14,7 +16,7 @@ module.exports = {
         ); // filePath
 
       } else if (absorbEl.indexOf('js=') >= 0) {
-        if (absorbEl.indexOf(' defer ') > 0) jsMod = ' defer';
+        if (absorbEl.indexOf(' defer ') > 0 | absorbEl.indexOf('defer="defer"') > 0) jsMod = ' defer';
         else if (absorbEl.indexOf(' async ') > 0) jsMod = ' async';
         else jsMod = '';
         // console.log(jsMod);

@@ -39,6 +39,7 @@ With the code above, given that the files are present where we specified in our 
 ## CHANGE LOG
 
 ### 6/10/2016
+- v0.0.5 | Fixed greedy match error.
 - v0.0.4 | Fixed error caused by space preceeding '/>'.
 - v0.0.3 | Added support for script `async` and `defer` attributes.
 - v0.0.2 | Fixed undiagnosed `unidentified` error.
